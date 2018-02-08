@@ -54,3 +54,12 @@ end
 get '/work' do
   erb :work
 end
+
+post '/visit' do
+  @username = params[:username]
+  @phone = params[:phone]
+  @datetime = params[:datetime]
+  @barber = params[:barber]
+  @color = params[:color]
+  erb "OK! username: #{@username}, color: #{@color}"
+end
